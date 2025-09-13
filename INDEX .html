@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAKHAT Spices - Ignite Your Taste Buds!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+     /* --- Dark Mode Variables --- */
+        :root {
+            --bg-primary: #f4f4f4;
+            --bg-secondary: #fff;
+            --text-color: #333;
+            --heading-color: #5C4033;
+            --header-bg: rgba(255, 255, 255, 0.9);
+            --footer-bg: #CD853F;
+            --footer-text: #fff;
+            --card-border: #ddd;
+            --card-shadow: rgba(0,0,0,0.1);
+            --hero-overlay: rgba(0, 0, 0, 0.3);
+            --nav-link-hover-bg: #8B4513;
+            --nav-link-hover-color: #ffff;
+            --button-bg: #8B4513;
+            --button-text: #fff;
+            --button-hover-bg: #CD853F;
+            --swiper-arrow-color: #8B4513;
+            --swiper-arrow-bg: rgba(255, 255, 255, 0.8);
+            --swiper-arrow-hover-bg: #8B4513;
+            --swiper-arrow-hover-color: #fff;
+            --swiper-pagination-active: #8B4513;
+            --swiper-pagination-inactive: #CD853F;
+            --fa fa-female:#5C4033;
+        }
+
+        body.dark-mode {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2c2c2c;
+            --text-color: #e0e0e0;
+            --heading-color: #e0a37c;
+            --header-bg: rgba(44, 44, 44, 0.9);
+            --footer-bg: #5C4033;
+            --footer-text: #f0f0f0;
+            --card-border: #444;
+            --card-shadow: rgba(0,0,0,0.4);
+            --hero-overlay: rgba(0, 0, 0, 0.6);
+            --nav-link-hover-bg: #CD853F;
+            --nav-link-hover-color: #2c2c2c;
+            --button-bg: #CD853F;
+            --button-text: #2c2c2c;
+            --button-hover-bg: #e0a37c;
+            --swiper-arrow-color: #e0a37c;
+            --swiper-arrow-bg: rgba(0, 0, 0, 0.5);
+            --swiper-arrow-hover-bg: #e0a37c;
+            --swiper-arrow-hover-color: #2c2c2c;
+            --swiper-pagination-active: #e0a37c;
+            --swiper-pagination-inactive: #CD853F;
+            --fa fa-female:white;
+        }
+
+        /* Basic Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.9;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: var(--bg-primary);
+            color: var(--text-color);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--heading-color);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--heading-color);
+        }
+
+        h2 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--header-bg);
+            padding: 20px 0;
+            box-shadow: 0 2px 5px var(--card-shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            font-weight: 500;
+            color: var(--heading-color);
+            text-decoration: none;
+            border-radius: 50%;
+            width: 100px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--heading-color);
+            font-weight: 500;
+            transition: color 0.3s ease, background 0.3s ease, padding 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--nav-link-hover-color);
+            background: var(--nav-link-hover-bg);
+            padding: 0.6rem;
+            border-radius: 5px;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: var(--heading-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            margin-top: 80px;
+            transition: background-image 1s ease-in-out;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--hero-overlay);
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h2 {
+            font-size: 3em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 1.5em;
+            color: #f0f0f0;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px var(--card-shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--bg-secondary);
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--bg-primary);
+        }
+
+        /* Swiper Container */
+        .swiper-container {
+            width: 100%;
+            height: auto;
+            padding-bottom: 40px;
+            position: relative;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* Product Card */
+        .product-card {
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 8px var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+            width: 400px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var(--bg-secondary);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px var(--card-shadow);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 0.95em;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .product-card .benefits-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        .product-card .benefits-list li {
+            margin-bottom: 5px;
+        }
+
+        .product-card .price {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--swiper-pagination-inactive);
+            margin-top: auto;
+        }
+
+        /* Order Now Button */
+        .order-now-btn {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .order-now-btn:hover {
+            background-color: var(--button-hover-bg);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .order-now-btn::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%, -50%);
+            transform-origin: 50% 50%;
+        }
+
+        .order-now-btn:focus:not(:active)::after {
+            animation: ripple 0.6s ease-out;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+
+        /* Testimonials Section */
+        .testimonial-card {
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--card-shadow);
+            width: 400px;
+            margin: 0 auto;
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--bg-secondary);
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--heading-color);
+        }
+
+        .testimonial-card .quote {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .testimonial-card .customer-info {
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 5px;
+        }
+
+        .testimonial-card .location {
+            font-size: 0.9em;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card .stars {
+            color: #FFD700;
+            font-size: 1.2em;
+        }
+
+        /* Feedback Form */
+        #feedbackForm {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px var(--card-shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--bg-secondary);
+        }
+
+        #feedbackForm label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        #feedbackForm input[type="text"],
+        #feedbackForm input[type="email"],
+        #feedbackForm select,
+        #feedbackForm textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--card-border);
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            background-color: var(--bg-primary);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        #feedbackForm textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        #feedbackForm input[type="submit"] {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #feedbackForm input[type="submit"]:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        /* Promotional Video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px var(--card-shadow);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.5);
+        }
+
+        .whatsapp {
+            color: white;
+        }
+        .whatsapp:hover {
+            color: #25D366;
+        }
+
+        .instagram {
+            color:white;
+        }
+        .instagram:hover {
+            color: #E1306C;
+        }
+
+        .youtube {
+            color: white;
+        }
+        .youtube:hover {
+            color: #FF0000;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+            display: none;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            background-color: var(--bg-secondary);
+            width: 250px;
+            height: 100%;
+            position: absolute;
+            right: -250px;
+            top: 0;
+            padding-top: 60px;
+            box-shadow: -2px 0 10px var(--card-shadow);
+            transition: right 0.3s ease-in-out, background-color 0.3s ease;
+        }
+
+        .mobile-nav-links.active {
+            right: 0;
+        }
+
+        .mobile-nav-links li {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--heading-color);
+            font-weight: 600;
+            display: block;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2em;
+            color: var(--heading-color);
+            cursor: pointer;
+        }
+
+        /* Swiper Navigation Arrows */
+        .product-swiper-button-next,
+        .product-swiper-button-prev,
+        .testimonial-swiper-button-next,
+        .testimonial-swiper-button-prev {
+            color: var(--swiper-arrow-color);
+            background-color: var(--swiper-arrow-bg);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .product-swiper-button-next:hover,
+        .product-swiper-button-prev:hover,
+        .testimonial-swiper-button-next:hover,
+        .testimonial-swiper-button-prev:hover {
+            background-color: var(--swiper-arrow-hover-bg);
+            color: var(--swiper-arrow-hover-color);
+        }
+
+        .product-swiper-button-prev,
+        .testimonial-swiper-button-prev { left: 10px; }
+        .product-swiper-button-next,
+        .testimonial-swiper-button-next { right: 10px; }
+
+        /* Swiper Pagination */
+        .swiper-pagination {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .swiper-pagination-bullets .swiper-pagination-bullet {
+            background-color: var(--swiper-pagination-inactive);
+            opacity: 0.7;
+            transition: background-color 0.3s ease;
+        }
+
+        .swiper-pagination-bullets .swiper-pagination-bullet-active {
+            background-color: var(--swiper-pagination-active);
+            opacity: 1;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle-button {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            margin-left: 20px;
+            box-shadow: 0 2px 5px var(--card-shadow);
+            flex-shrink: 0;
+        }
+
+        .theme-toggle-button:hover {
+            background-color: var(--button-hover-bg);
+            box-shadow: 0 4px 8px var(--card-shadow);
+        }
+
+        .theme-toggle-button .icon-placeholder i {
+            color: var(--button-text);
+            transition: color 0.3s ease;
+        }
+
+        /* CEO Message Section */
+        #ceo-message {
+            background-color: var(--bg-secondary);
+            padding: 60px 20px;
+        }
+
+        .ceo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .ceo-image {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .ceo-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--heading-color);
+            box-shadow: 0 4px 10px var(--card-shadow);
+        }
+
+        .ceo-text {
+            text-align: center;
+        }
+
+        .ceo-text p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .ceo-signature {
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .ceo-name {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: var(--heading-color);
+        }
+
+        .ceo-title {
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* Product Order Page Styles */
+        #product-order-page {
+            display: none;
+            padding-top: 100px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--heading-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-btn i {
+            margin-right: 8px;
+        }
+
+        .product-order-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .product-image img {
+            width: 50%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px var(--card-shadow);
+        }
+
+        .order-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px var(--card-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .order-price {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin: 20px 0;
+        }
+
+        .submit-btn {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+
+
+        /* footer animation */
+
+       @keyframes pulse {
+       0% { transform: scale(1.7); }
+       50% { transform: scale(2); }
+       100% { transform: scale(1.7); }
+      }
+
+      .pulse-phone {
+       animation: pulse 1.5s ease-in-out infinite; /* Smoother transition */
+       }
+
+       .pulse-phone:hover {
+       animation-play-state: paused;
+       }
+
+        /* ====================== */
+        /* === Responsive Media Queries === */
+        /* ====================== */
+
+        /* Mobile Devices (max-width: 768px) */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+
+            .hero-text h2 {
+                font-size: 2.2em;
+            }
+
+            .hero-text p {
+                font-size: 1.2em;
+            }
+
+            .product-card {
+                width: 280px;
+                min-height: 480px;
+            }
+
+            .testimonial-card {
+                width: 300px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .product-swiper-button-next,
+            .product-swiper-button-prev,
+            .testimonial-swiper-button-next,
+            .testimonial-swiper-button-prev {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8em;
+            }
+
+            .product-swiper-button-prev,
+            .testimonial-swiper-button-prev {
+                left: 5px;
+            }
+
+            .product-swiper-button-next,
+            .testimonial-swiper-button-next {
+                right: 5px;
+            }
+
+            .theme-toggle-button {
+                margin-left: 10px;
+            }
+
+            .navbar {
+                justify-content: space-between;
+                padding-right: 10px;
+            }
+
+            .navbar .logo {
+                margin-right: auto;
+            }
+
+            .ceo-container {
+                flex-direction: column;
+            }
+
+            .ceo-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .product-order-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Small Mobile Landscape (320px - 480px) */
+        @media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+            .hero {
+                height: 60vh;
+                margin-top: 60px;
+            }
+            
+            .hero-text h2 {
+                font-size: 2em;
+            }
+            
+            .hero-text p {
+                font-size: 1.1em;
+            }
+            
+            .product-card {
+                width: 260px;
+                min-height: 460px;
+            }
+            
+            .testimonial-card {
+                width: 280px;
+            }
+            
+            .navbar {
+                padding: 0 10px;
+            }
+            
+            .ceo-photo {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* Tablet Portrait (481px - 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .hero {
+                height: 60vh;
+            }
+            
+            .hero-text h2 {
+                font-size: 2.5em;
+            }
+            
+            .hero-text p {
+                font-size: 1.3em;
+            }
+            
+            .product-card {
+                width: 280px;
+                min-height: 480px;
+            }
+            
+            .testimonial-card {
+                width: 350px;
+            }
+            
+            .navbar {
+                padding: 0 15px;
+            }
+            
+            .ceo-photo {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .product-swiper-button-next,
+            .product-swiper-button-prev,
+            .testimonial-swiper-button-next,
+            .testimonial-swiper-button-prev {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+            }
+        }
+
+        /* Tablet Landscape (769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero {
+                height: 65vh;
+            }
+            
+            .product-card {
+                width: 280px;
+                min-height: 480px;
+            }
+            
+            .testimonial-card {
+                width: 380px;
+            }
+            
+            .ceo-container {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .ceo-image {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+            
+            .ceo-text {
+                text-align: left;
+            }
+            
+            .product-swiper-button-next,
+            .product-swiper-button-prev,
+            .testimonial-swiper-button-next,
+            .testimonial-swiper-button-prev {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1em;
+            }
+        }
+
+        /* Laptop (1025px - 1440px) */
+        @media (min-width: 1025px) and (max-width: 1440px) {
+            .hero {
+                height: 70vh;
+            }
+            
+            .product-card {
+                width: 300px;
+                min-height: 500px;
+            }
+            
+            .testimonial-card {
+                width: 400px;
+            }
+            
+            .ceo-container {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .ceo-image {
+                margin-right: 40px;
+                margin-bottom: 0;
+            }
+            
+            .ceo-text {
+                text-align: left;
+            }
+            
+            .product-swiper-button-next,
+            .product-swiper-button-prev,
+            .testimonial-swiper-button-next,
+            .testimonial-swiper-button-prev {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2em;
+            }
+        }
+
+        /* Large Desktop (1441px and up) */
+        @media (min-width: 1441px) {
+            .container {
+                max-width: 1400px;
+            }
+            
+            .hero {
+                height: 75vh;
+            }
+            
+            .hero-text h2 {
+                font-size: 3.5em;
+            }
+            
+            .hero-text p {
+                font-size: 1.8em;
+            }
+            
+            .product-card {
+                width: 320px;
+                min-height: 520px;
+            }
+            
+            .testimonial-card {
+                width: 450px;
+            }
+            
+            .ceo-container {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .ceo-image {
+                margin-right: 50px;
+                margin-bottom: 0;
+            }
+            
+            .ceo-text {
+                text-align: left;
+            }
+            
+            .product-swiper-button-next,
+            .product-swiper-button-prev,
+            .testimonial-swiper-button-next,
+            .testimonial-swiper-button-prev {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3em;
+            }
+        }
+
+        /* Special Cases */
+        /* Tall mobile devices (like iPhone 12/13 Mini in portrait) */
+        @media (max-height: 700px) and (orientation: portrait) {
+            .hero {
+                height: 80vh;
+            }
+            
+            .hero-text h2 {
+                font-size: 2em;
+            }
+            
+            .hero-text p {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Short desktop screens (height adjustment) */
+        @media (max-height: 800px) and (min-width: 1025px) {
+            .hero {
+                height: 85vh;
+            }
+        }
+
+        /* Ultra-wide monitors */
+        @media (min-width: 2000px) {
+            .container {
+                max-width: 1800px;
+            }
+            
+            html {
+                font-size: 18px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+                font-size: 12pt;
+            }
+        
+            .hero, footer, .hamburger-menu, .theme-toggle-button, .order-now-btn {
+                display: none !important;
+            }
+        
+            .container {
+                max-width: 100%;
+                padding: 0.5in;
+            }
+        
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+        }
+    
+html, body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+    }
+
+    .hamburger-menu {
+        display: block !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+}
+</style>
+
+<body>
+    <!-- Main Page Content -->
+    <div id="main-content">
+        <header>
+            <div class="navbar container">
+                <img src="nakhat.jpg" width="10%" height="auto" class="logo" alt="Nakhat Spices Logo">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <li><a href="#About"><i class="fa-solid fa-circle-info"></i>About</a></li>
+                        <li><a href="#products"><i class="fa-solid fa-box-open"></i>Product</a></li>
+                        <li><a href="#missions"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                        <li><a href="#testimonials"><i class="fa-solid fa-comment-dots"></i>Testimonials</a></li>
+                        <li>
+                            <button id="theme-toggle" class="theme-toggle-button">
+                                <span class="icon-placeholder"><i class="fas fa-moon"></i></span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="hamburger-menu">☰</div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="mobile-menu-overlay">
+            <ul class="mobile-nav-links">
+                <li class="close-menu">×</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li>
+                    <button id="theme-toggle-mobile" class="theme-toggle-button">
+                        <span class="icon-placeholder"><i class="fas fa-moon"></i></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h2 id="heroSpiceText">Ignite Your Taste Buds with NAKHAT Curry</h2>
+                <p>Authentic Nigerian Spices for Every Dish</p>
+            </div>
+        </section>
+
+        <!-- CEO Message Section -->
+        <section id="ceo-message" class="container">
+            <div class="ceo-container">
+                <div class="ceo-image">
+                  
+                </div>
+                <div class="ceo-text">
+                    <h2>A Message From The CEO</h2>
+                    <p>Dear Valued Customers,</p>
+                    <p>Welcome to NAKHAT Spices, where passion meets flavor in every blend. As the founder of this company, I'm proud to share our authentic Nigerian spice blends that have been carefully crafted to bring the rich tastes of our heritage to your kitchen.</p>
+                    <p>Growing up in Northern Nigeria, I was surrounded by vibrant markets filled with aromatic spices. These childhood memories inspired me to create NAKHAT - a brand that captures the true essence of Nigerian cuisine while making it accessible for everyday cooking.</p>
+                    <p>Each of our spice blends is meticulously formulated using traditional recipes with a modern twist. We source only the finest ingredients and combine them in perfect proportions to ensure consistent, exceptional flavor in every dish you prepare.</p>
+                    <p>At NAKHAT, we believe that great food starts with great ingredients. That's why we're committed to providing you with premium quality spices that will transform your cooking experience.</p>
+                    <p>Thank you for choosing NAKHAT Spices. I look forward to hearing how our products have enhanced your culinary creations!</p>
+                    <p class="ceo-signature">Warm regards,</p>
+                    <p class="ceo-name">Aminah Hadi Abubakar</p>
+                    <p class="ceo-title">Founder & CEO, NAKHAT Spices</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="container">
+            <h2>Our Products</h2>
+            <div class="swiper-container product-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="curry2.jpeg" alt="NAKHAT Curry Spice">
+                            <h3>NAKHAT Curry Spice</h3>
+                            <p>A rich and aromatic blend, perfect for all your curry dishes.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Turmeric, Cumin, Coriander, Fenugreek, Ginger,Black Pepper,Aniseed,Mustard...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                    <li><strong>Turmeric:</strong> 
+                                    Anti-inflammatory, antioxidant.</li>
+                                    <li><strong>Cumin:</strong>
+                                    Contains flavonoids with antioxidant properties that can help neutralize free radicals, potentially reducing the risk of chronic diseases like cancer and heart disease.</li>
+                                    <li><strong>Aniseed:</strong>It may also have anti-fungal, antibacterial, and anti-inflammatory properties.</li>
+                                    <li><strong>Fenugreek</strong> 
+                                    Known for its potential to lower blood sugar levels and improve blood sugar control. It may also increase milk production in breastfeeding mothers,reducing cholesterol, easing menstrual cramps, and potentially lowering inflammation.</li>
+                                    <li><strong>Mustard:</strong>
+                                    Provides glucosinolates and omega-3 fatty acids, which are linked to reduced inflammation and potentially lower the risk of cardiovascular diseases and cancer.</li>
+                                    <li><strong>Coriander:</strong> May help lower blood sugar levels, potentially reducing the risk of type 2 diabetes. It's also rich in antioxidants, which can boost immunity, may improve heart,and brain health</li>
+                                </ul>
+                                <span class="price">₦1,300</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Curry Spice" data-price="1500" data-image="curry2.jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="friedrice.jpeg" alt="NAKHAT Fried Rice Spice">
+                            <h3>NAKHAT Fried Rice Spice</h3>
+                            <p>Specially formulated to give your fried rice that authentic, irresistible taste.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Curry, Black Pepper, Garlic, Onion, Thyme, Paprika, Bay Leaf...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                <li><strong>Chili:</strong>
+                                Digestive Health:Chili peppers can stimulate digestion and boost metabolism.
+                                Pain Relief:Capsaicin, found in chili peppers, has analgesic properties and can be used to relieve pain, including joint pain.
+                                </li>  
+                                <li><strong>Thyme:</strong>
+                                Antifungal and Antimicrobial: Thyme has potent antifungal and antimicrobial properties, which can help fight off infections. 
+                                Respiratory Health: It can act as an expectorant, helping to clear excess mucus from the respiratory tract and relieve coughs. 
+                                Anti-inflammatory: Thyme contains compounds with anti-inflammatory properties, which may be beneficial for various health conditions. 
+                                </li>
+                                </ul>
+                                <span class="price">₦1,300</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Fried Rice Spice" data-price="1350" data-image="friedrice.jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="multipurpose.jpeg" alt="NAKHAT Multipurpose Spice">
+                            <h3>NAKHAT Multipurpose Spice</h3>
+                            <p>Your go-to spice for almost any dish! This versatile blend is perfect for seasoning meats, poultry, fish, vegetables, and even soups.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Paprika, Garlic, Onion, Black Pepper,Paprika,<br>Cardamon,Ginger,Onion,Curry<br>Chilli,Aniseed,Fenugreek,Thyme,African Nutmeg,Sesame,Fennel,<br>Oregano,Tumeric,Star Anise,Bay Leaf,Cloves Thyme, Rosemary...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                     <li><strong>Cloves:</strong>
+                                    Rich in antioxidants: Cloves contain compounds that can help protect cells from damage.
+                                    Anti-inflammatory and analgesic properties: They contain eugenol, which has been shown to reduce inflammation and pain.studies suggest clove-based mouthwash can reduce harmful bacteria in the mouth.</li>
+                                     <li><strong>Bay Leaf:</strong>
+                                    May improve insulin function: Bay leaves may help regulate blood sugar levels, which is important for diabetes management.
+                                    </li>
+                                     <li><strong>Rosemary:</strong>
+                                     Rosemary's antioxidant and anti-inflammatory compounds can help strengthen the immune system and potentially protect against infections.it also helps reduces Inflammation,Pain Relief, Health and hair growth. </li>
+                                </ul>
+                                <span class="price">₦1,300</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Multipurpose Spice" data-price="1200" data-image="multipurpose.jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                                  
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="ground_pepper_small.jpeg" alt="NAKHAT Ground Pepper(small_garlic)">
+                            <h3>NAKHAT Ground Pepper Small(Garlic)</h3>
+                            <p> Bold Flavor, Ground Fresh!..</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Ginger,Pepper,Garlic,Salt,Maggi...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                    <li><strong>Ginger:</strong>Aids digestion:<br> Ginger can help relieve nausea, vomiting, bloating, and gas. 
+                                    Anti-inflammatory and antioxidant properties:<br> Ginger contains gingerol, which has both antioxidant and anti-inflammatory effects. 
+                                    May reduce muscle pain and stiffness: <br>Ginger can act as a natural pain reliever.</li>
+                                    <li><strong>Garlic:</strong>
+                                     Boosts the immune system: <br>Garlic contains compounds that can help the body fight off infections and illnesses, including the common cold.
+                                    Lowers cholesterol: <br>Garlic has been shown to reduce both total cholesterol and LDL (bad) cholesterol levels. 
+                                    Reduces blood pressure: <br>Studies suggest that garlic can help lower blood pressure, a significant risk factor for heart disease. </li>
+                                    <li><strong></strong></li>
+                                </ul>
+                                <span class="price">₦1,200</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Ground Pepper(small_garlic)" data-price="1,200" data-image=".jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                                  
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="ground_pepper_small.jpeg" alt="NAKHAT Ground Pepper(small)">
+                            <h3>NAKHAT Ground Pepper Small Pack</h3>
+                            <p> Bold Flavor, Ground Fresh!.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Ginger,Pepper,Salt,Maggi...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                    <li><strong>Ginger:</strong>Aids digestion:<br> Ginger can help relieve nausea, vomiting, bloating, and gas. 
+                                    Anti-inflammatory and antioxidant properties:<br> Ginger contains gingerol, which has both antioxidant and anti-inflammatory effects. 
+                                    May reduce muscle pain and stiffness: <br>Ginger can act as a natural pain reliever.</li>
+                                     <li><strong>Pepper:</strong>
+                                    Digestive Health: <br>Chili peppers can stimulate digestion and boost metabolism.
+                                    Pain Relief:Capsaicin, found in chili peppers, has analgesic properties and can be used to relieve pain, including joint pain.
+                                    Heart Health: <br>They may help improve cardiovascular health by reducing inflammation and improving blood flow.
+                                    Antimicrobial Properties: <br>Chili peppers can help fight off certain infections and may even be beneficial in fighting the flu and colds.
+                                    </li>
+                                  
+                                <span class="price">₦1,200</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Ground Pepper(small)" data-price="1,200" data-image=".jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+ 
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="jollof.jpg" alt="NAKHAT Jollof Spice">
+                            <h3>NAKHAT Jollof Spice</h3>
+                            <p>Capture the true essence of Nigerian Jollof Rice with our expertly crafted spice blend.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Ginger, Garlic, Chilli, Thyme, Cinnamon, Nutmeg, Paprika,Coriander...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                   <li><strong>Chili:</strong>
+                                Digestive Health:Chili peppers can stimulate digestion and boost metabolism.
+                                Pain Relief:Capsaicin, found in chili peppers, has analgesic properties and can be used to relieve pain, including joint pain.
+                                Heart Health:They may help improve cardiovascular health by reducing inflammation and improving blood flow.</li>  
+                                 <li><strong>Nutmeg:</strong>
+                                Improved Digestion:In small quantities, nutmeg can help with indigestion, bloating, and gas, potentially acting as a digestive aid.  
+                                Mood Booster:Some research indicates nutmeg may have mood-enhancing properties and could help reduce symptoms of anxiety and depression and also aids in sleeping.</li>
+                                </ul>
+                                <span class="price">₦1,300</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Jollof Spice" data-price="1400" data-image="jollof.jpg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="ground_pepper_big.jpeg" alt="NAKHAT Ground Pepper(garlic)">
+                            <h3>NAKHAT Ground Pepper (Garlic)</h3>
+                            <p>Spice Up Your Life – Nakhat Ground Pepper Delight!.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Ginger,Pepper,Garlic,Salt,Maggi...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                    <li><strong>Ginger:</strong>Aids digestion:<br> Ginger can help relieve nausea, vomiting, bloating, and gas. 
+                                    Anti-inflammatory and antioxidant properties:<br> Ginger contains gingerol, which has both antioxidant and anti-inflammatory effects. 
+                                    May reduce muscle pain and stiffness: <br>Ginger can act as a natural pain reliever.</li>
+                                    <li><strong>Garlic:</strong>
+                                     Boosts the immune system: <br>Garlic contains compounds that can help the body fight off infections and illnesses, including the common cold.
+                                    Lowers cholesterol: <br>Garlic has been shown to reduce both total cholesterol and LDL (bad) cholesterol levels. 
+                                    Reduces blood pressure: <br>Studies suggest that garlic can help lower blood pressure, a significant risk factor for heart disease. </li>
+                                    <li><strong></strong></li>
+                                </ul>
+                                <span class="price">₦2,350</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Ground Pepper(garlic)" data-price="2,350" data-image=".jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                                    
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="ground_pepper_big.jpeg" alt="NAKHAT Ground Pepper">
+                            <h3>NAKHAT Ground Pepper </h3>
+                            <p> Spice Up Your Life – Nakhat Ground Pepper Delight!.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Ginger,Pepper,Garlic,Salt,Maggi...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                    <li><strong>Ginger:</strong>Aids digestion:<br> Ginger can help relieve nausea, vomiting, bloating, and gas. 
+                                    Anti-inflammatory and antioxidant properties:<br> Ginger contains gingerol, which has both antioxidant and anti-inflammatory effects. 
+                                    May reduce muscle pain and stiffness: <br>Ginger can act as a natural pain reliever.</li>
+                                    <li><strong>Pepper:</strong>
+                                        Digestive Health: <br>Chili peppers can stimulate digestion and boost metabolism.
+                                    Pain Relief:Capsaicin, found in chili peppers, has analgesic properties and can be used to relieve pain, including joint pain.
+                                    Heart Health: <br>They may help improve cardiovascular health by reducing inflammation and improving blood flow.
+                                    Antimicrobial Properties: <br>Chili peppers can help fight off certain infections and may even be beneficial in fighting the flu and colds.</li>
+                                </ul>
+                                <span class="price">₦2,350</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Ground Pepper" data-price="2,350" data-image=".jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="pepper.jpeg" alt="NAKHAT Pepper Soup Spice">
+                            <h3>NAKHAT Pepper Soup Spice</h3>
+                            <p>The ultimate blend for an authentic and comforting bowl of Pepper Soup.</p>
+                            <div class="product-details">
+                                <h4>Key Ingredients:</h4>
+                                <ul class="benefits-list">
+                                    <li>Cloves,Ginger, Onion, Black Pepper, Garlic,Bay Leaf, Cardamon, Uziza ...</li>
+                                </ul>
+                                <h4>Health Benefits:</h4>
+                                <ul class="benefits-list">
+                                    <li><strong>Onion:</strong>
+                                     May reduce risk of certain cancers: Studies suggest a link between onion consumption and a reduced risk of colorectal and breast cancer. 
+                                     improve cardiovascular health: Onions contain compounds that can help lower blood pressure and cholesterol. 
+                                     Good for digestive health: Onions are a source of dietary fiber, which can support healthy digestion.</li>
+                                    <li><strong>Ginger:</strong> 
+                                    Aids digestion: Ginger can help relieve nausea, vomiting, bloating, and gas. 
+                                    Anti-inflammatory and antioxidant properties: Ginger contains gingerol, which has both antioxidant and anti-inflammatory effects. 
+                                    May reduce muscle pain and stiffness: Ginger can act as a natural pain reliever. .</li>
+                                     <li><strong>Cloves:</strong> 
+                                    Rich in antioxidants: Cloves contain compounds that can help protect cells from damage.
+                                    Anti-inflammatory and analgesic properties: They contain eugenol, which has been shown to reduce inflammation and pain.
+                                    May ease dental pain and prevent gum disease: Studies suggest clove-based mouthwash can reduce harmful bacteria in the mout.</li>
+                                     <li><strong>Bay Leaf:</strong> 
+                                    May improve insulin function: Bay leaves may help regulate blood sugar levels, which is important for diabetes management.
+                                    May help regulate cholesterol levels: Bay leaves may have a positive impact on cholesterol levels </li>
+                                     
+                                </ul>
+                                <span class="price">₦1,550</span>
+                            </div>
+                            <button class="order-now-btn" data-product="NAKHAT Pepper Soup Spice" data-price="1600" data-image="pepper.jpeg">
+                                Order Now <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                
+
+                </div>
+                <div class="swiper-button-next product-swiper-button-next"></div>
+                <div class="swiper-button-prev product-swiper-button-prev"></div>
+                <div class="swiper-pagination product-swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="container">
+            <h2>What Our Customers Are Saying</h2>
+            <div class="swiper-container testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <i class="fa fa-female" aria-hidden="true"  style="font-size: 50px; color: #CD853F";></i>
+                            <p class="quote">"I have used alot of jollof spice blends, but Nakhat really stood out for me.
+                             The aroma alone when it hits hot oil is super amazing , just a few spoons and my rice tasted like proper party jollof, it came out smoky,rich and full of flavor, Mmmm yum yum, no need to add a bunch of extras with Nakhat Spices ."</p>
+                            <p class="customer-info">Nafisa</p>
+                            <p class="location">Kaduna, Nigeria</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                             <i class="fa fa-female" aria-hidden="true"  style="font-size: 50px; color: #CD853F";></i>
+                            <p class="quote">"This Spice blend is a game-changer! I added it to my morning scrambled eggs, and it completely elevated the flavor, and it's become a staple in my kitchen. The combination of spices is perfectly balanced, and it's so easy to use. I highly recommend it to anyone looking to add some excitement to their meals!"</p>
+                            <p class="customer-info">Mummy Nur</p>
+                            <p class="location">Gwagwalada,Abuja, Nigeria</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <i class="fa fa-female" aria-hidden="true"  style="font-size: 50px; color: #CD853F";></i>
+                            <p class="quote">"I absolutely love your spices.They are so natural and have such great, fresh flavor.
+                            The scent when using them is amazing and i am in total awe with the spice set."</p>
+                            <p class="customer-info">Hameeda</p>
+                            <p class="location">New Millenium City,Kaduna, Nigeria</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                         <i class="fa fa-female" aria-hidden="true"  style="font-size: 50px; color: #CD853F";></i>
+                            <p class="quote">"I love everything about this brand, it brings incredible taste to every dish i have used it on."</p>
+                            <p class="customer-info">Mummy Esha</p>
+                            <p class="location">Area 1, Abuja, Nigeria</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                     
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <i class="fa fa-female" aria-hidden="true"  style="font-size: 50px; color: #CD853F";></i>
+                            <p class="quote">"I've beeb using this spice blend for months now, and its completely transformed my cooking! The flavors are so rich and deep, and its incredibly versatile - i've used it on everything from roasted vegetables to grilled meats. My family and friends can't get enough of it! Highly recommend giving it a try."</p>
+                            <p class="customer-info">Ruqayya</p>
+                            <p class="location">Kaduna, Nigeria</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                       
+
+                </div>
+                <div class="swiper-button-next testimonial-swiper-button-next"></div>
+                <div class="swiper-button-prev testimonial-swiper-button-prev"></div>
+                <div class="swiper-pagination testimonial-swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="feedback" class="container">
+            <h2>Share Your NAKHAT Experience!</h2>
+            <form id="feedbackForm">
+                <label for="customerName">Your Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
+
+                <label for="customerEmail">Your Email:</label>
+                <input type="email" id="customerEmail" name="customerEmail" required>
+
+                <label for="customerLocation">Your Location:</label>
+                <input type="text" id="customerLocation" name="customerLocation">
+
+                <label for="rating">Star Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select a rating</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+
+                <label for="feedbackMessage">Your Feedback:</label>
+                <textarea id="feedbackMessage" name="feedbackMessage" rows="5" required></textarea>
+
+                <input type="submit" value="Send Feedback">
+            </form>
+        </section>
+
+        <section id="video" class="container">
+            <h2>Promotional Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p><h2>3TRIPPLE BITES CORNER LTD</h2><br>
+                <h4>Factory Address: No. 8, New Arkilla Layout, Sokoto, Wamakko LGA, Sokoto State, Nigeria.</h4></p>
+                <p><h4>Head Office: No. 37B Isa Kaita Road, Kaduna, Kaduna State, Nigeria.</h4><br>
+                <h4><i class="fas fa-envelope" style="font-size: 20px; color: white; margin-right:10px;"></i>3triplebiteslimited01@gmail.com</h4><br>
+                <h4><i class="fas fa-phone pulse-phone" style="font-size: 15px; margin-right: 10px;"></i>08032519455</h4></p>
+                <p><h4>Made with passion in Nigeria.</h4></p>
+                <p><h4>© 2025 NAKHAT Spices. All rights reserved.</h4></p>
+                <div class="social-icons">
+                    <a href="https://wa.me/08032519455" class="whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/nakhat_spices" class="instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/yourchannel" class="youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Product Order Page (hidden by default) -->
+    <div id="product-order-page" class="container">
+        <a href="#" id="back-to-products" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Products</a>
+        
+        <h1 id="product-title">Order NAKHAT Spices</h1>
+        
+        <div class="product-order-container">
+            <div class="product-image">
+                <img id="product-image" src="" alt="Product Image">
+                <div class="order-price" id="product-price"></div>
+            </div>
+            
+            <div class="order-form">
+                <h2>Place Your Order</h2>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <select id="quantity" name="quantity" required>
+                            <option value="1">1 Pack</option>
+                            <option value="2">2 Packs</option>
+                            <option value="3">3 Packs</option>
+                            <option value="4">4 Packs</option>
+                            <option value="5">5 Packs</option>
+                            <option value="10">10 Packs (Wholesale)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" name="payment" required>
+                            <option value="bank">Bank Transfer</option>
+                            <option value="cash">Cash on Payment</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" name="notes"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+       
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme Toggle Functionality
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+            const body = document.body;
+
+            function setIcon(isDarkMode) {
+                const iconClassToAdd = isDarkMode ? 'fa-sun' : 'fa-moon';
+                const iconClassToRemove = isDarkMode ? 'fa-moon' : 'fa-sun';
+
+                if (themeToggleBtn) {
+                    themeToggleBtn.querySelector('.icon-placeholder i').classList.remove(iconClassToRemove);
+                    themeToggleBtn.querySelector('.icon-placeholder i').classList.add(iconClassToAdd);
+                }
+
+                if (themeToggleBtnMobile) {
+                    themeToggleBtnMobile.querySelector('.icon-placeholder i').classList.remove(iconClassToRemove);
+                    themeToggleBtnMobile.querySelector('.icon-placeholder i').classList.add(iconClassToAdd);
+                }
+            }
+
+
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                body.classList.add(currentTheme);
+                setIcon(currentTheme === 'dark-mode');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                body.classList.add('dark-mode');
+                setIcon(true);
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                body.classList.add('light-mode');
+                setIcon(false);
+                localStorage.setItem('theme', 'light-mode');
+            }
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    if (body.classList.contains('dark-mode')) {
+                        body.classList.remove('dark-mode');
+                        body.classList.add('light-mode');
+                        localStorage.setItem('theme', 'light-mode');
+                        setIcon(false);
+                    } else {
+                        body.classList.remove('light-mode');
+                        body.classList.add('dark-mode');
+                        localStorage.setItem('theme', 'dark-mode');
+                        setIcon(true);
+                    }
+                });
+            }
+
+            if (themeToggleBtnMobile) {
+                themeToggleBtnMobile.addEventListener('click', () => {
+                    if (body.classList.contains('dark-mode')) {
+                        body.classList.remove('dark-mode');
+                        body.classList.add('light-mode');
+                        localStorage.setItem('theme', 'light-mode');
+                        setIcon(false);
+                    } else {
+                        body.classList.remove('light-mode');
+                        body.classList.add('dark-mode');
+                        localStorage.setItem('theme', 'dark-mode');
+                        setIcon(true);
+                    }
+                });
+            }
+
+            // Initialize Product Swiper
+            const productSwiper = new Swiper('.product-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: '.product-swiper-button-next',
+                    prevEl: '.product-swiper-button-prev',
+                },
+                pagination: {
+                    el: '.product-swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+
+            // Initialize Testimonial Swiper
+            const testimonialSwiper = new Swiper('.testimonial-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: '.testimonial-swiper-button-next',
+                    prevEl: '.testimonial-swiper-button-prev',
+                },
+                pagination: {
+                    el: '.testimonial-swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                },
+            });
+
+            // Dynamic Background Image and Text Changer
+            const hero = document.querySelector('.hero');
+            const heroSpiceText = document.getElementById('heroSpiceText');
+            const spices = [
+                { text: "Ignite Your Taste Buds with NAKHAT Curry", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTupVYQgIYCD5LG366PLoGe68qgzP-664NJZQ&usqp=CAU" },
+                { text: "Perfect Your Plate with NAKHAT Fried Rice", image: "jollof2.jpeg" },
+                { text: "Your Everyday Culinary Essential: NAKHAT Multipurpose", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN3xfBtcxpdi4Uw3ORGDhDiE34tM6Fmv56YSIp0iLLJNprDguW0fGnlZw&s=10" },
+                { text: "Taste the True Spirit of Jollof with NAKHAT", image: "jollof3.jpg" },
+                { text: "Warm Your Soul with NAKHAT Pepper Soup", image: "peppersoupe2.jpeg" }
+            ];
+            let currentIndex = 0;
+
+            function changeHeroContent() {
+                hero.style.backgroundImage = `url('${spices[currentIndex].image}')`;
+                heroSpiceText.textContent = spices[currentIndex].text;
+                currentIndex = (currentIndex + 1) % spices.length;
+            }
+
+            changeHeroContent();
+            setInterval(changeHeroContent, 5000);
+
+            // Toggle Menu Functionality
+            const hamburger = document.querySelector('.hamburger-menu');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            const mobileNavLinks = document.querySelector('.mobile-nav-links');
+            const closeMenu = document.querySelector('.close-menu');
+
+            hamburger.addEventListener('click', () => {
+                mobileMenuOverlay.style.display = 'block';
+                setTimeout(() => {
+                    mobileNavLinks.classList.add('active');
+                }, 10);
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileNavLinks.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenuOverlay.style.display = 'none';
+                }, 300);
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileNavLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNavLinks.classList.remove('active');
+                    setTimeout(() => {
+                        mobileMenuOverlay.style.display = 'none';
+                    }, 300);
+                });
+            });
+
+            // Feedback Form Submission
+            document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const form = this;
+                emailjs.sendForm('service_2bwsjwq', 'template_cswu4kq', form)
+                    .then(function() {
+                        alert('Your feedback has been sent successfully!');
+                        form.reset();
+                    }, function(error) {
+                        alert('Failed to send feedback. Please try again later. Error: ' + JSON.stringify(error));
+                    });
+            });
+
+            // Product Order Page Functionality
+            const mainContent = document.getElementById('main-content');
+            const productOrderPage = document.getElementById('product-order-page');
+            const backToProductsBtn = document.getElementById('back-to-products');
+            const productTitle = document.getElementById('product-title');
+            const productImage = document.getElementById('product-image');
+            const productPrice = document.getElementById('product-price');
+
+            // Product data
+            const products = {
+                "NAKHAT Curry Spice": {
+                    image: "curry2.jpeg",
+                    price: "₦1,300"
+                },
+                "NAKHAT Fried Rice Spice": {
+                    image: "friedrice.jpeg",
+                    price: "₦1,300"
+                },
+                "NAKHAT Multipurpose Spice": {
+                    image: "multipurpose.jpeg",
+                    price: "₦1,300"
+                },
+                "NAKHAT Jollof Spice": {
+                    image: "jollof.jpg",
+                    price: "₦1,300"
+                },
+                "NAKHAT Pepper Soup Spice": {
+                    image: "pepper.jpeg",
+                    price: "₦1,550"
+                },
+
+                "NAKHAT Ground Pepper": {
+                    image: "ground_pepper_big.jpeg",
+                    price: "₦2,350",
+                },
+
+                "NAKHAT Ground Pepper(garlic)": {
+                    image: "ground_pepper_big.jpeg",
+                    price: "₦2,350",
+                },
+
+                "NAKHAT Ground Pepper(small)": {
+                    image: "ground_pepper_small.jpeg",
+                    price: "₦1,200",
+                },
+
+                "NAKHAT Ground Pepper(small_garlic)": {
+                    image: "ground_pepper_small.jpeg",
+                    price: "₦1,200",
+                },
+
+            };
+
+            // Handle Order Now button clicks
+            document.querySelectorAll('.order-now-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productName = this.getAttribute('data-product');
+                    const productData = products[productName];
+                    
+                    // Update order page with product details
+                    productTitle.textContent = `Order ${productName}`;
+                    productImage.src = productData.image;
+                    productImage.alt = productName;
+                    productPrice.textContent = productData.price;
+                    
+                    // Show order page and hide main content
+                    mainContent.style.display = 'none';
+                    productOrderPage.style.display = 'block';
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+
+            // Handle back to products button
+            backToProductsBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                productOrderPage.style.display = 'none';
+                mainContent.style.display = 'block';
+                window.scrollTo(0, 0);
+            });
+
+            // Handle order form submission
+            document.getElementById('orderForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const product = productTitle.textContent.replace('Order ', '');
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const quantity = document.getElementById('quantity').value;
+                
+                alert(`Thank you, ${name}! Your order for ${quantity} ${product} has been received. We'll send confirmation to ${email}.`);
+                
+                // Reset form and go back to products
+                this.reset();
+                productOrderPage.style.display = 'none';
+                mainContent.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
